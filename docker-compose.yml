@@ -4,7 +4,7 @@ services:
   myDB:
     image: postgres:15.3
     container_name: my-database
-    restart: always
+    #restart: always
     ports:
       - 5432:5432
     environment:
@@ -17,7 +17,7 @@ services:
   pdAdmin:
     image: dpage/pgadmin4
     container_name: pgadmin4
-    restart: always
+    #restart: always
     depends_on:
       - myDB
     ports:
