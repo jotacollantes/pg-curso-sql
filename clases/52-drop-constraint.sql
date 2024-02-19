@@ -22,7 +22,7 @@ ALTER TABLE country
 							or(continent = 'Africa'::text)
 								or(continent = 'Europe'::text)
 									or(continent = 'Central America'::text));
-
+-- Borrar el check
 ALTER TABLE country DROP CONSTRAINT "country_continent_check7";
 
 

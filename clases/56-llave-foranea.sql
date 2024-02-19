@@ -15,6 +15,6 @@ FROM
 	city
 WHERE
 	countrycode = 'AFG';
-
+--Pais que falta
 INSERT INTO country
 		values('AFG', 'Afghanistan', 'Asia', 'Southern Asia', 652860, 1919, 40000000, 62, 69000000, NULL, 'Afghanistan', 'Totalitarian', NULL, NULL, 'AF');

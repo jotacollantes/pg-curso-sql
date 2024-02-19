@@ -4,8 +4,7 @@ FROM
 	country;
 
 
-ALTER TABLE country
-	ADD PRIMARY KEY (code);
+0
 
 SELECT
 	*
