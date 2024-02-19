@@ -1,3 +1,16 @@
+-- select cantidad, domain from (
+-- select
+-- count(*) as cantidad,
+-- substring(email, position('@' in email)+1 ) as domain,
+-- 'Jota' as nombre,
+-- 45 as edad
+-- from users
+-- group by substring(email, position('@' in email)+1 )
+-- having count(*) > 1
+-- order by cantidad desc
+-- ) as email_domains
+
+
 
 
 SELECT
