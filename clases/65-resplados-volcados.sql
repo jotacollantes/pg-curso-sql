@@ -1,4 +1,5 @@
 -- Table Definition
+--* Old table
 CREATE TABLE "public"."country_bk" (
     "code" bpchar NOT NULL,
     "name" text NOT NULL,
@@ -30,6 +31,7 @@ SELECT * from country_bk;
 
 SELECT * from country;
 
+-- para poder impactar el campo en la tabla con el nuevo valor es necesario eliminar el constraint
 alter table country drop CONSTRAINT country_continent_check;
 
 

@@ -30,11 +30,13 @@ SELECT * from country_bk;
 
 SELECT * from country;
 
+--* para poder impactar el campo en la tabla con el nuevo valor es necesario eliminar el constraint
 alter table country drop CONSTRAINT country_continent_check;
 
 
 select 
 	a.name, a.continent,
+    --* creamos otra columna con un subquery 
 	( select "code" from continent b where b.name = a.continent )
 from country a;
 
@@ -46,7 +48,11 @@ select * from country;
 
 
 
+-- Relacion Continent -> Country
+-- * Primero se hace el cast de la columna en country
+ALTER TABLE country ALTER COLUMN continent TYPE integer USING continent::integer
 
+ALTER TABLE country ADD CONSTRAINT fk_continent_code FOREIGN KEY (continent) REFERENCES continent (code);
 
 
 

@@ -2,6 +2,7 @@
 
 select DISTINCT continent from country order by continent asc; 
 
+--* Inserts con select
 
 INSERT INTO continent (name)
 	SELECT DISTINCT
