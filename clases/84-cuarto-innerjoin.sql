@@ -9,7 +9,7 @@ select * from country;
 select * from continent;
 
 
-
+--* obtenemos el nombre del idioma de la tambla de idiomas y no del countrylanguage
 select distinct d.name, c."name" as continent from countrylanguage a 
 inner JOIN country b ON a.countrycode = b.code
 inner join continent c on b.continent = c.code

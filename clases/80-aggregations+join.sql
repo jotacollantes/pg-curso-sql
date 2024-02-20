@@ -39,3 +39,18 @@ ORDER BY
 	count;
 
 -- order by count(*) asc;
+
+
+--Total de paies por continentes incluido los continentes que tengan 0 paises 
+select count(*) total, b.name from country a
+inner join continent b
+on a.continent=b.code
+group by b.name
+--order by total asc
+union
+select 0 total, b.name from country a
+right join continent b
+on a.continent=b.code
+where a.continent is null
+group by b.name
+order by total asc
