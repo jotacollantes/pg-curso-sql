@@ -3,7 +3,8 @@ SELECT
 FROM
 	employees
 WHERE
-	hire_date > date('1998-02-05')
+	--hire_date > date('1998-02-05')
+	hire_date > '1998-02-05'
 ORDER BY
 	hire_date DESC;
 
