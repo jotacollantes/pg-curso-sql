@@ -1,4 +1,6 @@
+--*https://www.postgresql.org/docs/current/uuid-ossp.html
 
+--* para usar uuid hay que crear la extension de uuid
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 DROP EXTENSION "uuid-ossp";
 
