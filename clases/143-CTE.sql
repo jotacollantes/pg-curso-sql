@@ -1,4 +1,4 @@
-
+--* con with creamos un result set temporal
 with posts_week_2024 as (
 	SELECT date_trunc('week'::text, posts.created_at) AS weeks,
     sum(claps.counter) AS total_claps,

@@ -1,4 +1,3 @@
-
 WITH claps_per_post as (
 	select post_id, sum(counter) from claps
 	GROUP by post_id
