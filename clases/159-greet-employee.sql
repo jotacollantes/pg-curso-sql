@@ -10,6 +10,7 @@ RETURNS VARCHAR
 as $$
 -- DECLARE
 BEGIN
+--* concatenamos employee_name
 	RETURN 'Hola ' || employee_name;
 
 END;

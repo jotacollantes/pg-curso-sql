@@ -37,10 +37,12 @@ DECLARE
 BEGIN
 	
 	-- Tomar el puesto de trabajo y el salario
+	--* todas las columnas se almacenan en selected_employee
 	select * from employees into selected_employee
 	where employee_id = empl_id;
 
 	-- Tomar el max salary, acorde a su job
+	--* todas las columnas se almacenan en selected_job
 	select * from jobs into selected_job
 	where job_id = selected_employee.job_id;
 	

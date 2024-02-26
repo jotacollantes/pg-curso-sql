@@ -49,6 +49,7 @@ BEGIN
 	possible_raise = job_max_salary - current_salary;
 
 	IF ( possible_raise < 0 ) THEN
+		--* lanzamos la excepcion, reemplazamos el % por valor del argumento de la funcion
 		RAISE EXCEPTION 'Persona con salario mayor max_salary: %', empl_id;
 -- 		possible_raise = 0;
 	END IF;

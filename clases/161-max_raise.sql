@@ -31,6 +31,7 @@ DECLARE
 BEGIN
 	
 	select 
+		--* el resultado lo almacenamos en la variable possible_raise
 		max_salary - salary into possible_raise
 	from employees
 	INNER JOIN jobs on jobs.job_id = employees.job_id

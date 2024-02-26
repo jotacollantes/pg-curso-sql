@@ -38,11 +38,15 @@ BEGIN
 	-- Tomar el puesto de trabajo y el salario
 	select 
 		job_id, salary
+		--* Almacenamos en las variables
 		into employee_job_id, current_salary
 	from employees where employee_id = empl_id;
 
 	-- Tomar el max salary, acorde a su job
-	select max_salary into job_max_salary from jobs where job_id = employee_job_id;
+	select max_salary
+	--* Almacenamos en las variables
+	into job_max_salary
+	from jobs where job_id = employee_job_id;
 	
 	
 	-- Cálculos
