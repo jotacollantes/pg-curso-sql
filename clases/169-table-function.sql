@@ -9,6 +9,7 @@ create or replace FUNCTION country_region()
 as $$
 
 BEGIN
+    --* Retornamos un query para que la funcion retorne la tabla
 	RETURN query
 		select country_id, country_name, region_name from countries
 			inner join regions on countries.region_id = regions.region_id;
